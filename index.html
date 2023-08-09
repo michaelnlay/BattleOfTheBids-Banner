@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .banner-gif {
+            position: relative;
+            overflow: hidden;
+            max-width: 850px;
+            transition: max-width 0.5s ease-in-out;
+        }
+
+        .banner-gif.closed {
+            max-width: 0;
+        }
+
+        img.x-button {
+            /* position: absolute;
+            left: 822px;
+            top: 2px;
+            cursor: pointer; */
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+    /* .banner-gif a img{
+
+        width:60%
+    } */
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="banner-gif" id="banner-gif">
+        <img src="./Clear.png" class="x-button" onclick="hideBanner()" alt="x-button">
+        <a href="https://www.battleofthebids.com/splash" target="_blank">
+            <img src="https://loopnet-dev.acquia.dshrp.com/sites/loopnet.com/files/Loopnet%20Banner%20%20(850x80)%20White.gif"
+                alt="Banner-gif-850">
+        </a>
+    </div>
+</body>
+<script>
+    function hideBanner() {
+        var bannerGift = document.getElementById("banner-gif")
+        // bannerGift.style.display="none";
+        bannerGift.classList.add("closed")
+    }
+
+    //  // Add a delay of 3000 milliseconds (3 seconds) before showing the banner
+    //  setTimeout(function() {
+    //         var bannerGif = document.getElementById("banner-gif");
+    //         bannerGif.classList.remove("closed");
+    //     }, 3000);
+
+</script>
+
+</html>
